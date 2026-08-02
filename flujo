@@ -1,0 +1,43 @@
+     Inicio
+                   │
+                   ▼
+     Completar formulario de registro
+                   │
+                   ▼
+         Presionar botón "Enviar"
+                   │
+                   ▼
+      Validar Nombre completo
+                   │
+          ¿Es válido?
+          ├── No ─────────────► Mostrar mensaje de error
+          │
+          ▼ Sí
+      Validar Correo electrónico
+                   │
+          ¿Es válido?
+          ├── No ─────────────► Mostrar mensaje de error
+          │
+          ▼ Sí
+        Validar Contraseña
+                   │
+          ¿Es válida?
+          ├── No ─────────────► Mostrar mensaje de error
+          │
+          ▼ Sí
+ Validar Confirmar contraseña
+                   │
+ ¿Coincide con Contraseña?
+          ├── No ─────────────► Mostrar mensaje de error
+          │
+          ▼ Sí
+   Validar Fecha de nacimiento
+                   │
+ ¿Usuario tiene al menos 13 años?
+          ├── No ─────────────► Mostrar mensaje de error
+          │
+          ▼ Sí
+        Crear cuenta de usuario
+                   │
+                   ▼
+                  Fin
