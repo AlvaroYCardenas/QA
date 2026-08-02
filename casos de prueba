@@ -1,0 +1,237 @@
+Como QA, escribiría los casos de prueba siguiendo una estructura estándar:
+
+* **ID**
+* **Título**
+* **Precondiciones** (opcional, pero recomendable)
+* **Pasos**
+* **Resultado esperado**
+
+Como el número de combinaciones es muy grande, **no es necesario crear un caso por cada valor límite**. Lo correcto es cubrir **cada clase de equivalencia** y los **valores límite** relevantes. A continuación se muestra un conjunto representativo.
+
+---
+
+# Casos de prueba
+
+## Grupo 1. Registro exitoso
+
+### TC-001 – Registro exitoso con datos válidos
+
+**Pasos**
+
+1. Abrir el formulario de registro.
+2. Ingresar un nombre válido.
+3. Ingresar un correo electrónico válido.
+4. Ingresar una contraseña válida.
+5. Confirmar la contraseña correctamente.
+6. Seleccionar una fecha de nacimiento correspondiente a un usuario de al menos 13 años.
+7. Presionar **Enviar**.
+
+**Resultado esperado**
+
+La cuenta de usuario se crea correctamente.
+
+---
+
+# Grupo 2. Nombre completo
+
+### TC-002 – Nombre con menos de 5 caracteres
+
+**Pasos**
+
+1. Completar todos los campos con valores válidos.
+2. Ingresar un nombre de 4 caracteres.
+3. Presionar **Enviar**.
+
+**Resultado esperado**
+
+Se muestra un mensaje de error y la cuenta no se crea.
+
+---
+
+### TC-003 – Nombre con más de 50 caracteres
+
+**Pasos**
+
+1. Completar todos los campos con valores válidos.
+2. Ingresar un nombre de 51 caracteres.
+3. Presionar **Enviar**.
+
+**Resultado esperado**
+
+Se muestra un mensaje de error y la cuenta no se crea.
+
+---
+
+### TC-004 – Nombre con 5 caracteres
+
+**Pasos**
+
+1. Completar todos los campos con valores válidos.
+2. Ingresar un nombre de 5 caracteres.
+3. Presionar **Enviar**.
+
+**Resultado esperado**
+
+La cuenta de usuario se crea correctamente.
+
+---
+
+### TC-005 – Nombre con 50 caracteres
+
+**Pasos**
+
+1. Completar todos los campos con valores válidos.
+2. Ingresar un nombre de 50 caracteres.
+3. Presionar **Enviar**.
+
+**Resultado esperado**
+
+La cuenta de usuario se crea correctamente.
+
+---
+
+# Grupo 3. Correo electrónico
+
+### TC-006 – Correo electrónico válido
+
+**Pasos**
+
+1. Completar todos los campos con valores válidos.
+2. Ingresar un correo válido.
+3. Presionar **Enviar**.
+
+**Resultado esperado**
+
+La cuenta de usuario se crea correctamente.
+
+---
+
+### TC-007 – Correo electrónico inválido
+
+**Pasos**
+
+1. Completar todos los campos con valores válidos.
+2. Ingresar un correo inválido.
+3. Presionar **Enviar**.
+
+**Resultado esperado**
+
+Se muestra un mensaje de error y la cuenta no se crea.
+
+---
+
+# Grupo 4. Contraseña
+
+### TC-008 – Contraseña con menos de 8 caracteres
+
+**Resultado esperado**
+
+Se muestra un mensaje de error y la cuenta no se crea.
+
+---
+
+### TC-009 – Contraseña con más de 16 caracteres
+
+**Resultado esperado**
+
+Se muestra un mensaje de error y la cuenta no se crea.
+
+---
+
+### TC-010 – Contraseña sin mayúscula
+
+**Resultado esperado**
+
+Se muestra un mensaje de error y la cuenta no se crea.
+
+---
+
+### TC-011 – Contraseña sin minúscula
+
+**Resultado esperado**
+
+Se muestra un mensaje de error y la cuenta no se crea.
+
+---
+
+### TC-012 – Contraseña sin dígito
+
+**Resultado esperado**
+
+Se muestra un mensaje de error y la cuenta no se crea.
+
+---
+
+### TC-013 – Contraseña válida de 8 caracteres
+
+**Resultado esperado**
+
+La cuenta de usuario se crea correctamente.
+
+---
+
+### TC-014 – Contraseña válida de 16 caracteres
+
+**Resultado esperado**
+
+La cuenta de usuario se crea correctamente.
+
+---
+
+# Grupo 5. Confirmar contraseña
+
+### TC-015 – Confirmación igual a la contraseña
+
+**Resultado esperado**
+
+La cuenta de usuario se crea correctamente.
+
+---
+
+### TC-016 – Confirmación diferente a la contraseña
+
+**Resultado esperado**
+
+Se muestra un mensaje de error y la cuenta no se crea.
+
+---
+
+# Grupo 6. Fecha de nacimiento
+
+### TC-017 – Usuario con exactamente 13 años
+
+**Resultado esperado**
+
+La cuenta de usuario se crea correctamente.
+
+---
+
+### TC-018 – Usuario mayor de 13 años
+
+**Resultado esperado**
+
+La cuenta de usuario se crea correctamente.
+
+---
+
+### TC-019 – Usuario menor de 13 años
+
+**Resultado esperado**
+
+Se muestra un mensaje de error y la cuenta no se crea.
+
+---
+
+# Resumen
+
+| Grupo                |                  Casos |
+| -------------------- | ---------------------: |
+| Registro exitoso     |                      1 |
+| Nombre completo      |                      4 |
+| Correo electrónico   |                      2 |
+| Contraseña           |                      7 |
+| Confirmar contraseña |                      2 |
+| Fecha de nacimiento  |                      3 |
+| **Total**            | **19 casos de prueba** |
+
+Este conjunto de **19 casos** ofrece una buena cobertura de las clases de equivalencia y los valores límite identificados, incluyendo tanto escenarios positivos como negativos, sin generar combinaciones redundantes de entradas inválidas.
