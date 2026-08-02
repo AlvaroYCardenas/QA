@@ -1,0 +1,43 @@
+Formulario de registro de usuario
+│
+├── Campos
+│   │
+│   ├── Nombre completo
+│   │   ├── Tipo: texto
+│   │   └── Longitud: 5 a 50 caracteres
+│   │
+│   ├── Correo electrónico
+│   │   ├── Tipo: texto
+│   │   └── Debe ser una dirección de correo electrónico válida
+│   │
+│   ├── Contraseña
+│   │   ├── Tipo: texto
+│   │   ├── Longitud: 8 a 16 caracteres
+│   │   ├── Contiene al menos un dígito
+│   │   ├── Contiene al menos una letra mayúscula
+│   │   └── Contiene al menos una letra minúscula
+│   │
+│   ├── Confirmar contraseña
+│   │   ├── Tipo: texto
+│   │   └── Debe ser igual a Contraseña
+│   │
+│   └── Fecha de nacimiento
+│       ├── Tipo: fecha
+│       └── Usuario con al menos 13 años
+│
+├── Acción
+│   │
+│   └── Botón Enviar
+│
+├── Validaciones
+│   │
+│   ├── Validación del Nombre completo
+│   ├── Validación del Correo electrónico
+│   ├── Validación de la Contraseña
+│   ├── Validación de Confirmar contraseña
+│   └── Validación de Fecha de nacimiento
+│
+└── Respuesta del sistema
+    │
+    ├── Mostrar mensaje de error
+    └── Crear cuenta de usuario
