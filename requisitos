@@ -1,0 +1,130 @@
+# 1. Nombre completo
+
+**Requisito:** Texto de **5 a 50 caracteres**.
+
+## 1.1 Clases de equivalencia
+
+| #     | Clase                  | Tipo      | Valor de prueba                                        |
+| ----- | ---------------------- | --------- | ------------------------------------------------------ |
+| 1.1.1 | 5–50 caracteres        | Válida    | `Carlos Pérez`                                         |
+| 1.1.2 | Menor de 5 caracteres  | No válida | `Ana`                                                  |
+| 1.1.3 | Mayor de 50 caracteres | No válida | `Carlos Alejandro Fernández Martínez González Ramírez` |
+
+## 1.2 Valores límite
+
+| #     | Caso            | Valor         |
+| ----- | --------------- | ------------- |
+| 1.2.1 | Fuera inferior  | 4 caracteres  |
+| 1.2.2 | Límite inferior | 5 caracteres  |
+| 1.2.3 | Dentro inferior | 6 caracteres  |
+| 1.2.4 | Dentro superior | 49 caracteres |
+| 1.2.5 | Límite superior | 50 caracteres |
+| 1.2.6 | Fuera superior  | 51 caracteres |
+
+---
+
+# 2. Correo electrónico
+
+**Requisito:** Debe ser una dirección de correo electrónico válida.
+
+## 2.1 Clases de equivalencia
+
+| #     | Clase           | Tipo      | Valor de prueba     |
+| ----- | --------------- | --------- | ------------------- |
+| 2.1.1 | Correo válido   | Válida    | `usuario@email.com` |
+| 2.1.2 | Correo inválido | No válida | `usuarioemail.com`  |
+
+## 2.2 Valores límite
+
+No aplican, ya que el requisito no define restricciones de longitud.
+
+---
+
+# 3. Contraseña
+
+**Requisito:**
+
+* 8–16 caracteres.
+* Al menos una mayúscula.
+* Al menos una minúscula.
+* Al menos un dígito.
+
+## 3.1 Clases de equivalencia (Longitud)
+
+| #     | Clase                  | Tipo      | Valor de prueba    |
+| ----- | ---------------------- | --------- | ------------------ |
+| 3.1.1 | 8–16 caracteres        | Válida    | `Abcd1234`         |
+| 3.1.2 | Menor de 8 caracteres  | No válida | `Abc123`           |
+| 3.1.3 | Mayor de 16 caracteres | No válida | `Abcdefgh12345678` |
+
+## 3.2 Clases de equivalencia (Contenido)
+
+| #     | Clase                                  | Tipo      | Valor de prueba |
+| ----- | -------------------------------------- | --------- | --------------- |
+| 3.2.1 | Contiene mayúscula, minúscula y dígito | Válida    | `Abcd1234`      |
+| 3.2.2 | Sin mayúscula                          | No válida | `abcd1234`      |
+| 3.2.3 | Sin minúscula                          | No válida | `ABCD1234`      |
+| 3.2.4 | Sin dígito                             | No válida | `Abcdefgh`      |
+
+## 3.3 Valores límite
+
+| #     | Caso            | Valor         |
+| ----- | --------------- | ------------- |
+| 3.3.1 | Fuera inferior  | 7 caracteres  |
+| 3.3.2 | Límite inferior | 8 caracteres  |
+| 3.3.3 | Dentro inferior | 9 caracteres  |
+| 3.3.4 | Dentro superior | 15 caracteres |
+| 3.3.5 | Límite superior | 16 caracteres |
+| 3.3.6 | Fuera superior  | 17 caracteres |
+
+---
+
+# 4. Confirmar contraseña
+
+**Requisito:** Debe ser igual al campo **Contraseña**.
+
+## 4.1 Clases de equivalencia
+
+| #     | Clase                   | Tipo      | Valor de prueba |
+| ----- | ----------------------- | --------- | --------------- |
+| 4.1.1 | Igual a Contraseña      | Válida    | `Abcd1234`      |
+| 4.1.2 | Diferente de Contraseña | No válida | `Abcd1235`      |
+
+## 4.2 Valores límite
+
+No aplican, ya que el requisito define una comparación de igualdad y no un rango.
+
+---
+
+# 5. Fecha de nacimiento
+
+**Requisito:** El usuario debe tener **al menos 13 años**.
+
+## 5.1 Clases de equivalencia
+
+| #     | Clase          | Tipo      | Valor de prueba    |
+| ----- | -------------- | --------- | ------------------ |
+| 5.1.1 | Edad ≥ 13 años | Válida    | Persona de 20 años |
+| 5.1.2 | Edad < 13 años | No válida | Persona de 10 años |
+
+## 5.2 Valores límite
+
+| #     | Caso           | Valor             |
+| ----- | -------------- | ----------------- |
+| 5.2.1 | Fuera inferior | 12 años, 364 días |
+| 5.2.2 | Límite         | 13 años exactos   |
+| 5.2.3 | Dentro         | 13 años y 1 día   |
+
+---
+
+# Resumen
+
+| Campo                       | Clases de equivalencia | Valores límite |
+| --------------------------- | ---------------------- | -------------- |
+| **1. Nombre completo**      | 3                      | 6              |
+| **2. Correo electrónico**   | 2                      | No aplican     |
+| **3. Contraseña**           | 7                      | 6              |
+| **4. Confirmar contraseña** | 2                      | No aplican     |
+| **5. Fecha de nacimiento**  | 2                      | 3              |
+
+Esta organización es similar a la que suele utilizarse en planes de prueba y matrices de diseño de pruebas, ya que permite localizar rápidamente las clases y los valores límite de cada campo.
